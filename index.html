@@ -7,27 +7,7 @@
     <link rel="stylesheet" href="src/style.css">
     <title>weather-warn</title>
   </head>
-  <body x-data="{
-    city: '',
-    day: '',
-    
-    errMsg: '',
-    temp: '',
-    resTitle: '',
-    resBody: '',
-    resImg: '',
-    resImgAlt: '',
-    temp: '',
-    wind: '',
-    
-    isEarthQuake: false,
-    quakeTitle: '',
-    
-    scan: function(e) {
-      e.preventDefault()
-      
-    }
-  }">
+  <body x-data="app">
     <form>
       <label for="search">Enter your city: </label>
       <input type="search" placeholder="Search city.." id="search" required aria-required="true" x-model="city">
