@@ -1,5 +1,7 @@
 import Alpine from 'alpinejs'
 import { scan } from './weather.js'
+import weatherData from './weatherData.json';
+
 
 Alpine.data('app', () => ({
   city: '',
@@ -15,9 +17,12 @@ Alpine.data('app', () => ({
   resImgAlt: '',
   temp: '',
   wind: '',
+  severity: '',
   
   isEarthQuake: false,
   quakeTitle: '',
+  
+  weatherData,
   scan,
   
   async scanning(e) {
@@ -25,6 +30,6 @@ Alpine.data('app', () => ({
   },
 }))
  
+ 
 window.Alpine = Alpine
 Alpine.start()
-

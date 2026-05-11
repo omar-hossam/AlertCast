@@ -10,7 +10,7 @@
   <body x-data="app">
     <form>
       <label for="search">Enter your city: </label>
-      <input type="search" placeholder="Search city.." id="search" required aria-required="true" x-model="city">
+      <input type="search" placeholder="Search city.." id="search" x-ref="search" required aria-required="true" x-model="city">
       
       <label for="day">Day: </label>
       <select id="day" x-model="day">
