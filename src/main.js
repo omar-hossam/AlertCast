@@ -4,6 +4,8 @@ import { scan } from './weather.js'
 Alpine.data('app', () => ({
   city: '',
   day: '',
+  lat: '',
+  lon: '',
   
   errMsg: '',
   temp: '',
@@ -16,8 +18,11 @@ Alpine.data('app', () => ({
   
   isEarthQuake: false,
   quakeTitle: '',
-  
   scan,
+  
+  async scanning(e) {
+    return await scan.call(this, e)
+  },
 }))
  
 window.Alpine = Alpine
