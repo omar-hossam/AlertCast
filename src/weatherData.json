@@ -1,0 +1,106 @@
+[
+  {
+    "title": "Heatwave",
+    "body": "Extreme heat is a universal health risk. Use these accessible, low-cost strategies to regulate your body temperature and stay safe.",
+    "tips": [
+      "Drink tap water regularly; do not wait for thirst, as hydration is the primary defense against heat stress.",
+      "Seek shade or public cooling spaces like libraries or religious centers if your home becomes dangerously hot.",
+      "Use wet cloths or cool water on your skin (wrists, neck, and armpits) to lower your core body temperature quickly.",
+      "Wear any loose-fitting, light-colored clothing you own to allow air to circulate and sweat to evaporate.",
+      "Watch for red flag symptoms like confusion or stopping sweating, which indicate a medical emergency."
+    ],
+    "imgSrc": "src/images/heatwave.png",
+    "imgAlt": "an image represents heatwave"
+  },
+  {
+    "title": "Cold / Freeze risk",
+    "body": "Prolonged exposure to extreme cold can lead to hypothermia or frostbite. Protect your body heat and secure your home environment.",
+    "tips": [
+      "Wear multiple layers of loose-fitting clothing to trap body heat rather than one single heavy layer.",
+      "Cover all exposed skin, especially extremities like fingers, toes, and ears, which are most prone to frostbite.",
+      "Keep moving to generate body heat, but avoid overexertion that leads to sweating, as wet skin cools faster.",
+      "Block drafts around doors and windows using towels or blankets to keep heat inside living areas.",
+      "Eat warm, high-energy meals and drink warm fluids to provide your body with the fuel needed to produce heat."
+    ],
+    "imgSrc": "src/images/cold-freeze-risk.png",
+    "imgAlt": "an image represents cold / freeze risk"
+  },
+  {
+    "title": "Storm / High wind",
+    "body": "Strong winds can turn everyday objects into dangerous projectiles and cause structural damage. Prioritize physical cover.",
+    "tips": [
+      "Stay indoors and away from windows, glass doors, and skylights that could shatter from flying debris.",
+      "Secure or bring inside loose outdoor items like trash cans, garden tools, and furniture before the wind peaks.",
+      "Avoid standing near trees, tall poles, or power lines, as these are the most likely to fall during high gusts.",
+      "If caught outside, seek a low-lying area or a sturdy building and protect your head with your arms.",
+      "Listen to local authorities for updates, as high winds often precede more severe weather or power outages."
+    ],
+    "imgSrc": "src/images/storm-high-wind.png",
+    "imgAlt": "an image represents storm / high wind"
+  },
+  {
+    "title": "Heavy rain / flood risk",
+    "body": "Flash floods can occur within minutes. Never underestimate the power of moving water, even if it appears shallow.",
+    "tips": [
+      "Never walk, swim, or drive through floodwaters; just six inches of moving water can knock you off your feet.",
+      "Move to higher ground immediately if you live in a low-lying area or near a body of water.",
+      "Disconnect electrical appliances to prevent electric shock if water begins to enter your home.",
+      "Avoid contact with floodwater, as it is often contaminated with sewage, chemicals, or hidden sharp objects.",
+      "Keep an emergency kit with clean bottled water and a flashlight in an easy-to-reach, high location."
+    ],
+    "imgSrc": "src/images/heavy-rain-flood-risk.png",
+    "imgAlt": "an image represents heavy rain / flood risk"
+  },
+  {
+    "title": "Thunderstorm",
+    "body": "Lightning is a major threat during thunderstorms. Remember the rule: When thunder roars, go indoors.",
+    "tips": [
+      "Move to a substantial, fully enclosed building or a metal-topped vehicle immediately upon hearing thunder.",
+      "Avoid using corded phones or touching electrical appliances, as lightning can travel through wiring.",
+      "Stay away from plumbing, including sinks, baths, and showers, as lightning can travel through metal pipes.",
+      "If caught outdoors with no shelter, avoid tall isolated objects like trees and stay away from open water.",
+      "Wait at least 30 minutes after the last clap of thunder before leaving your shelter to ensure the threat has passed."
+    ],
+    "imgSrc": "src/images/thunderstorm.png",
+    "imgAlt": "an image represents thunderstorm"
+  },
+  {
+    "title": "Fog risk",
+    "body": "Fog significantly reduces visibility and can make navigation dangerous. Use extra caution and rely on specialized lighting.",
+    "tips": [
+      "Use low-beam headlights only; high beams reflect off the moisture and actually make it harder to see.",
+      "Reduce your speed immediately and increase the following distance between you and other travelers.",
+      "Use pavement markings (the side lines of the road) as a guide to stay in your lane rather than center lights.",
+      "Minimize distractions inside your vehicle and open your window slightly to listen for traffic you cannot see.",
+      "If visibility becomes near zero, pull over to a safe area away from the road and turn off all lights except hazard flashers."
+    ],
+    "imgSrc": "src/images/fog-risk.png",
+    "imgAlt": "an image represents fog risk"
+  },
+  {
+    "title": "Snow",
+    "body": "Heavy snow can lead to isolation and physical strain. Prioritize warmth and safe movement to avoid injuries.",
+    "tips": [
+      "Walk like a penguin on icy surfaces: keep your center of gravity over your front leg to avoid slipping.",
+      "Shovel snow in small amounts and lift with your legs, not your back, to prevent heart strain and muscle injury.",
+      "Keep exhaust vents for furnaces or water heaters clear of snow buildup to prevent carbon monoxide poisoning.",
+      "Ensure you have a basic emergency kit with food, blankets, and a flashlight in case of power or travel disruptions.",
+      "Apply sand or salt to walkways to improve traction, but avoid touching chemicals with bare skin."
+    ],
+    "imgSrc": "src/images/snow.png",
+    "imgAlt": "an image represents snow"
+  },
+  {
+    "title": "Earthquake",
+    "body": "Earthquakes happen without warning. Your immediate reaction determines your safety during the shaking.",
+    "tips": [
+      "Drop, Cover, and Hold On: get under a sturdy piece of furniture and protect your head and neck.",
+      "Stay away from glass, windows, outside doors and walls, and anything that could fall, such as lighting fixtures.",
+      "If you are outdoors, move to an open area away from buildings, streetlights, and utility wires.",
+      "If you are in a vehicle, stop as quickly as safety permits and stay inside until the shaking stops.",
+      "Expect aftershocks; these are often less intense than the main quake but can still cause weakened structures to fall."
+    ],
+    "imgSrc": "src/images/earthquake.png",
+    "imgAlt": "an image represents earthquake"
+  }
+]
