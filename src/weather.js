@@ -109,7 +109,7 @@ export async function scan(e) {
         this.resImg = 'src/images/smile.png';
         this.resImgAlt = 'Smiley face';
         this.resTitle = 'Normal Conditions';
-        this.resBody = 'No significant weather or disaster risks detected in your area.';
+        this.resBody = 'No significant weather risks detected in your area.';
         this.severity = 'LOW'
       } else {
         const weatherAlert = this.weatherData.find(item => item.title === title);
