@@ -3,6 +3,17 @@ import { scan } from './weather.js'
 import weatherData from './weatherData.json';
 
 
+function getCurrentTime() {
+  const now = new Date();
+  const time = now.toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+  });
+  return time
+}
+
+
 Alpine.data('app', () => ({
   city: '',
   day: '',
@@ -30,6 +41,8 @@ Alpine.data('app', () => ({
   async scanning(e) {
     return await scan.call(this, e)
   },
+  
+  notifiyTime: getCurrentTime()
 }))
  
  
