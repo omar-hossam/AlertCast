@@ -10,15 +10,17 @@ Alpine.data('app', () => ({
   lon: '',
   
   errMsg: '',
-  temp: '',
   resTitle: '',
   resBody: '',
   resImg: '',
   resImgAlt: '',
-  temp: '',
+  tempMax: '',
+  tempMin: '',
   wind: '',
   severity: '',
+  weatherTips: [],
   
+  shouldScanEarthquake: false,
   isEarthQuake: false,
   quakeTitle: '',
   

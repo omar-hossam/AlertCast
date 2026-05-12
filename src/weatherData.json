@@ -1,182 +1,156 @@
 [
   {
-    "type": "heatwave",
     "title": "Heatwave",
     "severity": "HIGH",
-    "body": "Extreme heat is a universal health risk. Use these accessible, low-cost strategies to regulate your body temperature and stay safe.",
+    "body": "Extreme heat detected. High risk of heat exhaustion and dehydration.",
     "tips": [
-      "Drink tap water regularly; do not wait for thirst.",
-      "Seek shade or public cooling spaces like libraries or mosques.",
-      "Use wet cloths on wrists, neck, and armpits to cool down quickly.",
-      "Wear loose, light-colored clothing to reduce heat absorption.",
-      "Watch for symptoms like confusion or dizziness (medical emergency)."
+      "Drink water frequently",
+      "Avoid direct sunlight",
+      "Stay in cool areas",
+      "Wear light clothing",
+      "Watch for dizziness or confusion"
     ],
     "imgSrc": "src/images/heatwave.png",
-    "imgAlt": "Heatwave warning illustration"
+    "imgAlt": "Heatwave illustration"
   },
   {
-    "type": "heatwave",
     "title": "Hot Weather",
     "severity": "MEDIUM",
-    "body": "High temperatures detected. Risk of heat stress during outdoor exposure.",
+    "body": "High temperatures detected. Heat stress possible during outdoor exposure.",
     "tips": [
-      "Stay hydrated throughout the day.",
-      "Avoid direct sunlight between 12pm–4pm.",
-      "Use fans or cooling areas when possible.",
-      "Wear breathable clothing.",
-      "Take frequent breaks if working outside."
+      "Stay hydrated",
+      "Avoid midday sun",
+      "Use shade or fans",
+      "Wear breathable clothes",
+      "Take frequent breaks"
     ],
     "imgSrc": "src/images/heatwave.png",
     "imgAlt": "Hot weather illustration"
   },
   {
-    "type": "storm",
+    "title": "Extreme Storm",
+    "severity": "HIGH",
+    "body": "Dangerous wind conditions detected. Risk of structural damage.",
+    "tips": [
+      "Stay indoors",
+      "Avoid windows",
+      "Do not travel",
+      "Secure objects outside",
+      "Prepare for power outage"
+    ],
+    "imgSrc": "src/images/wind.png",
+    "imgAlt": "Extreme storm illustration"
+  },
+  {
     "title": "Storm",
     "severity": "MEDIUM",
-    "body": "Strong winds detected. Outdoor objects may become dangerous.",
+    "body": "Strong winds detected. Outdoor conditions may be unsafe.",
     "tips": [
-      "Stay indoors and away from windows.",
-      "Secure loose outdoor objects.",
-      "Avoid trees and power lines.",
-      "Do not travel unless necessary.",
-      "Keep emergency alerts enabled."
+      "Stay indoors if possible",
+      "Secure loose items",
+      "Avoid trees and poles",
+      "Be cautious while driving",
+      "Follow alerts"
     ],
     "imgSrc": "src/images/storm.png",
     "imgAlt": "Storm illustration"
   },
   {
-    "type": "storm",
-    "title": "Extreme Storm",
-    "severity": "HIGH",
-    "body": "Dangerous wind conditions detected. Risk of structural damage and flying debris.",
-    "tips": [
-      "Stay indoors immediately.",
-      "Move away from glass and windows.",
-      "Avoid all travel.",
-      "Prepare for possible power outage.",
-      "Follow official emergency instructions."
-    ],
-    "imgSrc": "src/images/storm-high-wind.png",
-    "imgAlt": "Extreme storm illustration"
-  },
-  {
-    "type": "thunderstorm",
     "title": "Thunderstorm",
     "severity": "HIGH",
-    "body": "Lightning activity detected. High risk of electric discharge.",
+    "body": "Lightning activity detected. Risk of electric discharge.",
     "tips": [
-      "Go indoors immediately.",
-      "Avoid using electrical appliances.",
-      "Stay away from water and plumbing.",
-      "Do not shelter under trees.",
-      "Wait 30 minutes after last thunder before going out."
+      "Stay indoors",
+      "Avoid electrical devices",
+      "Do not use water plumbing",
+      "Avoid trees",
+      "Wait 30 min after thunder"
     ],
-    "imgSrc": "src/images/thunderstorm.png",
+    "imgSrc": "src/images/storm.png",
     "imgAlt": "Thunderstorm illustration"
   },
   {
-    "type": "flood",
     "title": "Flood Risk",
     "severity": "HIGH",
-    "body": "Heavy rainfall may lead to flash flooding. Water levels can rise quickly.",
+    "body": "Heavy rainfall may cause flooding in low areas.",
     "tips": [
-      "Never walk or drive through floodwater.",
-      "Move to higher ground immediately.",
-      "Avoid basements and low areas.",
-      "Disconnect electrical devices if water enters home.",
-      "Keep emergency supplies ready."
+      "Move to higher ground",
+      "Avoid walking in water",
+      "Do not drive through floods",
+      "Disconnect electricity if needed",
+      "Stay alert"
     ],
-    "imgSrc": "src/images/flood.png",
-    "imgAlt": "Flood risk illustration"
+    "imgSrc": "src/images/flooded-house.png",
+    "imgAlt": "Flood illustration"
   },
   {
-    "type": "rain",
     "title": "Heavy Rain",
     "severity": "MEDIUM",
-    "body": "Strong rainfall detected. Possible water accumulation and reduced visibility.",
+    "body": "Heavy rainfall detected. Visibility and road safety reduced.",
     "tips": [
-      "Avoid unnecessary travel.",
-      "Drive carefully and slowly.",
-      "Stay updated with weather alerts.",
-      "Wear waterproof clothing if outside.",
-      "Avoid low-lying areas."
+      "Drive slowly",
+      "Avoid low areas",
+      "Use waterproof gear",
+      "Stay updated",
+      "Avoid unnecessary travel"
     ],
     "imgSrc": "src/images/heavy-rain.png",
     "imgAlt": "Heavy rain illustration"
   },
   {
-    "type": "fog",
     "title": "Fog Alert",
     "severity": "LOW",
-    "body": "Reduced visibility conditions detected.",
+    "body": "Low visibility detected due to fog.",
     "tips": [
-      "Use low-beam headlights only.",
-      "Reduce driving speed.",
-      "Increase following distance.",
-      "Avoid sudden braking.",
-      "Pull over if visibility becomes too low."
+      "Use low beams",
+      "Drive slowly",
+      "Keep distance",
+      "Avoid sudden stops",
+      "Pull over if needed"
     ],
     "imgSrc": "src/images/fog.png",
     "imgAlt": "Fog illustration"
   },
   {
-    "type": "cold",
-    "title": "Cold Wave",
-    "severity": "MEDIUM",
-    "body": "Low temperature conditions detected. Risk of hypothermia.",
-    "tips": [
-      "Wear layered clothing.",
-      "Cover hands, feet, and head.",
-      "Stay indoors when possible.",
-      "Eat warm meals and drink hot fluids.",
-      "Avoid prolonged outdoor exposure."
-    ],
-    "imgSrc": "src/images/cold.png",
-    "imgAlt": "Cold weather illustration"
-  },
-  {
-    "type": "freeze",
     "title": "Freezing Cold",
     "severity": "HIGH",
-    "body": "Extreme cold conditions detected. High risk of frostbite and hypothermia.",
+    "body": "Extreme cold detected. Risk of frostbite and hypothermia.",
     "tips": [
-      "Limit outdoor exposure.",
-      "Wear insulated clothing.",
-      "Keep heating systems active.",
-      "Avoid wet clothing.",
-      "Seek shelter immediately if symptoms appear."
+      "Stay indoors",
+      "Wear insulated clothing",
+      "Avoid wet clothes",
+      "Use heating",
+      "Limit exposure"
     ],
-    "imgSrc": "src/images/freeze.png",
+    "imgSrc": "src/images/snowy.png",
     "imgAlt": "Freezing cold illustration"
   },
   {
-    "type": "snow",
-    "title": "Snow",
+    "title": "Cold Wave",
     "severity": "MEDIUM",
-    "body": "Snowfall detected. Travel and movement may be difficult.",
+    "body": "Cold temperatures detected. Prolonged exposure may be risky.",
     "tips": [
-      "Walk carefully on icy surfaces.",
-      "Shovel snow safely in small amounts.",
-      "Keep emergency supplies ready.",
-      "Avoid unnecessary travel.",
-      "Wear waterproof boots and gloves."
+      "Wear layers",
+      "Cover extremities",
+      "Drink warm fluids",
+      "Stay indoors if possible",
+      "Avoid long exposure"
     ],
-    "imgSrc": "src/images/snow.png",
-    "imgAlt": "Snow illustration"
+    "imgSrc": "src/images/snowy.png",
+    "imgAlt": "Cold wave illustration"
   },
   {
-    "type": "earthquake",
-    "title": "Earthquake",
-    "severity": "HIGH",
-    "body": "Earthquake detected. Immediate protective action required.",
+    "title": "Snow",
+    "severity": "MEDIUM",
+    "body": "Snowfall detected. Roads may be slippery.",
     "tips": [
-      "Drop, Cover, and Hold On.",
-      "Stay away from windows and heavy objects.",
-      "If outdoors, move to open area.",
-      "If in car, stop safely and stay inside.",
-      "Expect aftershocks."
+      "Walk carefully",
+      "Drive slowly",
+      "Wear warm clothing",
+      "Avoid unnecessary travel",
+      "Keep supplies ready"
     ],
-    "imgSrc": "src/images/earthquake.png",
-    "imgAlt": "Earthquake illustration"
+    "imgSrc": "src/images/snowy.png",
+    "imgAlt": "Snow illustration"
   }
 ]

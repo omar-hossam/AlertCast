@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -23,26 +23,67 @@
         <option value="6">6 days after</option>
       </select>
       
+      <label>
+        <input type="checkbox" x-model="shouldScanEarthquake" /> Scan nearby earthquakes <small>(today only*)</small>
+      </label>
+      
       <button @click="scan">Scan City</button>
       <p x-text="errMsg ? errMsg : ''" class="p-2 text-center font-bold text-red-500"></p>
     </form>
     
     <section>
+      <h2>Weather in <span x-text="city" class="font-bold text-blue-600"></span></h2>
+      
       <article>
         <header>
           <img :src="resImg" :alt="resImgAlt">
-          <h2 x-text="resTitle"></h2>
+          <h3 x-text="resTitle"></h3>
         </header>
         <p x-text="resBody"></p>
         
-        <p x-text="temp ? `Temperature: ${temp}` : ''"></p>
-        <p x-text="wind ? `Wind Speed: ${wind}` : ''"></p>
+        <div x-text="severity" class="severity"></div>
+        
+        <p x-text="tempMin ? `Temperature MIN: ${tempMin}C` : ''"></p>
+        <p x-text="tempMax ? `Temperature MAX: ${tempMax}C` : ''"></p>
+        <p x-text="wind ? `Wind Speed: ${wind}km/h` : ''"></p>
+        
+        <footer x-show="weatherTips.length > 0">
+          <hr />
+          <h3>Tips</h3>
+          
+          <template x-for="tip in weatherTips">
+            <li x-text="tip"></li>
+          </template>
+        </footer>
       </article>
-      <article x-show="isEarthQuake">
+    </section>
+    
+    <!------------------------------->
+    <!-- EARTH QUAKE -->
+    <!------------------------------->
+    
+    <section x-show="isEarthQuake">
+      <h2>Earthquake</h2>
+        
+      <article>
         <header>
-          <img src="src/images/earthquake.png" alt="Earthquake warning" />
-          <h2 x-text="quakeTitle"></h2>
+          <img src="src/images/earthquake.png" alt="Earthquake illustration" />
+          <h3 x-text="quakeTitle"></h3>
         </header>
+        <p>Earthquake detected. Immediate protective action required.</p>
+        
+        <div class="severity">HIGH</div>
+        
+        <hr />
+        <h3>Tips</h3>
+        
+        <ul>
+          <li>Drop, Cover, and Hold On.</li>
+          <li>Stay away from windows and heavy objects.</li>
+          <li>If outdoors, move to open area.</li>
+          <li>If in car, stop safely and stay inside.</li>
+          <li>Expect aftershocks.</li>
+        </ul>
       </article>
     </section>
     

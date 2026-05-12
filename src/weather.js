@@ -1,5 +1,5 @@
 import { getDateStr } from './helpers.js'
-
+import { scanEarthQuake } from './earthquake.js'
 
 export async function searchCity(cityName) {
   const response = await fetch(
@@ -20,95 +20,38 @@ export async function searchCity(cityName) {
 }
 
 
-function getWeatherAlert(weather_code, wind, temp_max, temp_min, precipitation_sum) {
+// RULE ENGINE
+function getWeatherTitle(weather_code, wind, temp_max, temp_min, precipitation_sum) {
   // Heatwave
-  if (temp_max >= 42) {
-    return {
-      title: "Heatwave",
-      severity: "HIGH"
-    };
-  }
+  if (temp_max >= 42) return "Heatwave";
 
-  if (temp_max >= 40) {
-    return {
-      title: "Hot Weather",
-      severity: "MEDIUM"
-    };
-  }
+  if (temp_max >= 40) return "Hot Weather";
 
   // Storm (wind-based)
-  if (wind >= 80) {
-    return {
-      title: "Extreme Storm",
-      severity: "HIGH"
-    };
-  }
+  if (wind >= 80) return "Extreme Storm";
 
-  if (wind >= 50) {
-    return {
-      title: "Storm",
-      severity: "MEDIUM"
-    };
-  }
+  if (wind >= 50) return "Storm";
 
   // Thunderstorm
-  if ([95, 96, 99].includes(weather_code)) {
-    return {
-      title: "Thunderstorm",
-      severity: "HIGH"
-    };
-  }
+  if ([95, 96, 99].includes(weather_code)) return "Thunderstorm";
 
-  // Flood / Heavy rain
-  if (precipitation_sum >= 40) {
-    return {
-      title: "Flood Risk",
-      severity: "HIGH"
-    };
-  }
+  // Flood / Rain
+  if (precipitation_sum >= 40) return "Flood Risk";
 
-  if (precipitation_sum >= 25) {
-    return {
-      title: "Heavy Rain",
-      severity: "MEDIUM"
-    };
-  }
+  if (precipitation_sum >= 25) return "Heavy Rain";
 
   // Fog
-  if ([45, 48].includes(weather_code)) {
-    return {
-      title: "Fog Alert",
-      severity: "LOW"
-    };
-  }
+  if ([45, 48].includes(weather_code)) return "Fog Alert";
 
-  // Cold wave
-  if (temp_min <= 0) {
-    return {
-      title: "Freezing Cold",
-      severity: "HIGH"
-    };
-  }
+  // Cold
+  if (temp_min <= 0) return "Freezing Cold";
 
-  if (temp_min <= 5 && temp_max <= 12) {
-    return {
-      title: "Cold Wave",
-      severity: "MEDIUM"
-    };
-  }
+  if (temp_min <= 5 && temp_max <= 12) return "Cold Wave";
 
   // Snow
-  if ([71, 73, 75, 77, 85, 86].includes(weather_code)) {
-    return {
-      title: "Snow",
-      severity: "MEDIUM"
-    };
-  }
+  if ([71, 73, 75, 77, 85, 86].includes(weather_code)) return "Snow";
 
-  return {
-    title: "Normal",
-    severity: "LOW"
-  };
+  return "Normal";
 }
 
 
@@ -121,8 +64,6 @@ export async function getWeather(lat, lon, day) {
   }
   
   const data = await response.json();
-  
-  console.log(data.results)
   
   if (!data.daily || data.daily.length === 0) {
     throw new Error("Weather API not working");
@@ -156,13 +97,39 @@ export async function scan(e) {
       const weatherResult = await getWeather(this.lat, this.lon, day);
       
       // Render the alert on screen
-      const { title, severity } = getWeatherAlert(
+      const title = getWeatherTitle(
         weatherResult.weather_code, 
         weatherResult.wind_speed_10m_max,
         weatherResult.temperature_2m_max, 
         weatherResult.temperature_2m_min, 
         weatherResult.precipitation_sum
       )
+      
+      if (title === 'Normal') {
+        this.resImg = 'src/images/smile.png';
+        this.resImgAlt = 'Smiley face';
+        this.resTitle = 'Normal Conditions';
+        this.resBody = 'No significant weather or disaster risks detected in your area.';
+        this.severity = 'LOW'
+      } else {
+        const weatherAlert = this.weatherData.find(item => item.title === title);
+        
+        this.resTitle = weatherAlert.title
+        this.resBody = weatherAlert.body
+        this.resImg = weatherAlert.imgSrc
+        this.resImgAlt = weatherAlert.imgAlt
+        this.severity = weatherAlert.severity
+        this.weatherTips = weatherAlert.tips
+      }
+      
+      this.tempMax = weatherResult.temperature_2m_max
+      this.tempMin = weatherResult.temperature_2m_min
+      this.wind = weatherResult.wind_speed_10m_max
+      
+      // Check if should scan earthquakes
+      if (this.shouldScanEarthquake) {
+        this.isEarthQuake = await scanEarthQuake(this.lat, this.lon, day)
+      }
       
     } catch (e) {
       this.errMsg = e.message;
